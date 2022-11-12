@@ -15,8 +15,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_12_070334) do
   enable_extension "plpgsql"
 
   create_table "hobbies", force: :cascade do |t|
-    t.bigint "player_id"
-    t.bigint "sport_id"
+    t.bigint "player_id", null: false
+    t.bigint "sport_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["player_id"], name: "index_hobbies_on_player_id"
@@ -40,4 +40,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_12_070334) do
     t.index ["name"], name: "index_sports_on_name"
   end
 
+  add_foreign_key "hobbies", "players"
+  add_foreign_key "hobbies", "sports"
 end

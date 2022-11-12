@@ -16,8 +16,8 @@ RSpec.describe Player, type: :model do
   end
 
   it 'gender should be male or female' do
-    subject.gender = 'male' || 'female'
-    expect(subject).to be_valid
+    subject.gender = 'malee'
+    expect(subject).to_not be_valid
   end
 
   it 'age should be integer' do
