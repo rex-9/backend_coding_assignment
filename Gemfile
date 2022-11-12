@@ -42,7 +42,6 @@ group :development, :test do
 
   gem 'capybara'
   gem 'database_cleaner-active_record'
-  gem 'factory_bot_rails'
   gem 'rails-controller-testing'
   gem 'rspec-rails'
 end
@@ -51,11 +50,5 @@ group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
 end
-
-gem 'devise', '~> 4.8'
-
-gem 'jwt', '~> 2.5'
-
-gem 'bcrypt', '~> 3.1'
 
 gem 'active_model_serializers', '~> 0.10.13'
