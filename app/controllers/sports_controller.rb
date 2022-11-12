@@ -17,7 +17,7 @@ class SportsController < ApplicationController
     no_player = []
     all_sports = Sport.all
     all_sports.each do |sport|
-      no_player << sport if sport.players.length == 0
+      no_player << sport if sport.players.length.zero?
     end
     render json: no_player
   end
